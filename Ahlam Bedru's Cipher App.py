@@ -18,7 +18,7 @@ def caesar(message, offset):
 
 # Streamlit app layout
 st.title("Ahlam Bedru's Cipher App")
-st.write(The Caesar cipher is a method of encrypting text by shifting each letter in the message by a number of positions in the alphabet. Try it for yourself!)
+st.write("The Caesar cipher is a method of encrypting text by shifting each letter in the message by a number of positions in the alphabet. Try it for yourself!")
 
 
 # Input for plain text
@@ -32,7 +32,7 @@ shift = st.number_input("Enter the shift value (1-25):", min_value=1, max_value=
 if st.button("Cipher It!"):
     if text:
         encrypted_text = caesar(text, shift)
-        st.write('**Plain text:**', text)
+        st.write('**Input text:**', text)
         st.write('**Encrypted text:**', encrypted_text)
     else:
         st.warning("Please enter a text to encrypt.")
@@ -40,7 +40,7 @@ if st.button("Cipher It!"):
 
 if st.button("Decipher It!"):
     if text:
-        decrypted_text = caesar(text, -shift, decrypt=True) #Use negative shift for decryption
+        decrypted_text = caesar(text, -shift)  # Use negative shift for decryption
         st.write('**input text:**', text)
         st.write('**Decrypted text:**', decrypted_text)
     else:
