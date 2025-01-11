@@ -18,8 +18,7 @@ def caesar(message, offset):
 
 # Streamlit app layout
 st.title("Ahlam Bedru's Cipher App")
-st.write(The Caesar cipher is a method of encrypting text by shifting each letter in the message by a set number of positions in the alphabet.)
-st.write("Encrypt or Decrypt your text using the Caesar cipher.")
+st.write(The Caesar cipher is a method of encrypting text by shifting each letter in the message by a number of positions in the alphabet.)
 
 
 # Input for plain text
